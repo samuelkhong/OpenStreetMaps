@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 /**
  * This class provides a main method for experimenting with GraphDB construction.
- * You could also use MapServer, but this class lets you play around with
+ * This class lets you play around with
  * GraphDB in isolation from all the rest of the parts of this assignment.
  */
 public class GraphDBLauncher {

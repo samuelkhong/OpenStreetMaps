@@ -19,10 +19,9 @@ import java.util.Stack;
  **
  *  The idea here is that some external library is going to walk through the XML
  *  file, and your override method tells Java what to do every time it gets to the next
- *  element in the file. This is a very common but strange-when-you-first-see it pattern.
- *  It is similar to the Visitor pattern we discussed for graphs.
+ *  element in the file. 
  *
- *  @author Alan Yao, Maurice Lee
+ *  @author Alan Yao, Maurice Lee, Samuel Khong
  */
 public class GraphBuildingHandler extends DefaultHandler {
     /**
@@ -93,10 +92,8 @@ public class GraphBuildingHandler extends DefaultHandler {
             String v = attributes.getValue("v");
             if (k.equals("maxspeed")) {
                 //System.out.println("Max Speed: " + v);
-                /* TODO set the max speed of the "current way" here. */
             } else if (k.equals("highway")) {
 //                System.out.println("Highway type: " + v);
-                /* TODO Figure out whether this way and its connections are valid. */
                 if(ALLOWED_HIGHWAY_TYPES.contains(v)) {
                     isValidWay = true;
 
