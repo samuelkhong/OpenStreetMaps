@@ -21,8 +21,36 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 
 ### Part II: Routing
 
-- **Description**: Users can obtain step-by-step street directions between two specified locations.
-- **Implementation**: Routing functionality is provided through various Java classes that compute and present routing information to users.
+- **Description**: Routing functionality allows users to obtain step-by-step street directions between two specified locations.
+- **Implementation**: Map rastering involves generating a map image based on user queries. The primary goal is to select and arrange a grid of map tiles that closely matches the user's specified criteria.
+
+## Key Components and Algorithms
+
+### LonDPP (Longitude Distance per Pixel)
+
+- **LonDPP**: LonDPP represents the longitudinal distance per pixel, a crucial factor in map rastering.
+- The initial LonDPP for depth 0 (depth0DPP) is calculated based on the provided constants from the MapServer class.
+
+### Dynamic Depth Calculation
+
+- The **depth** of the nodes for the rastered image is calculated dynamically based on the user's requested LonDPP.
+- The findDepth method ensures that the depth does not exceed the maximum depth of 7, maintaining a balance between detail and efficiency.
+
+### Coordinate Conversion
+
+- Several private methods are used to convert between longitude/latitude and tile positions (`lonToXpos`, `latToYpos`) and vice versa (`xPosToLeftLon`, `xPosToRightLon`, `yPosToLeftLat`, `yPosToRightLat`).
+- These methods enable precise positioning of tiles within the grid and accurate bounding box calculations.
+
+### Raster Grid Generation
+
+- The `fillRasterGrid` method plays a crucial role in generating the **raster grid** of image file names (`render_grid`) based on calculated tile positions and depth.
+- It efficiently arranges the tiles to reconstruct the complete map image, ensuring seamless rendering.
+
+### Query Success Check
+
+- The `isQuerySuccessful` method is responsible for verifying whether the user's query falls within the bounds of the available map data.
+- It accounts for scenarios where the query box extends beyond the boundaries of the map data.
+
 
 ### Part III: Autocomplete
 
