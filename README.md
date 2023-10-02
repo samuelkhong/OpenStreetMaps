@@ -139,7 +139,7 @@ To get started with OpenStreetMaps, follow these steps:
 |------|--------------|
 | 1.   | Git clone this repo and [library-sp18](https://github.com/Berkeley-CS61B/library-sp18), which contains OpenStreetMaps images and dataset. |
 | 2.   | **Running with IntelliJ:**<br>
-       | 1. `New -> Project from Existing Sources -> select Bear-Maps -> "Import Project from External Model" (Maven)`<br>
+       | 1. `New -> Project from Existing Sources -> select OpenStreetMaps -> "Import Project from External Model" (Maven)`<br>
        | 2. At the Import Project window, check: “Import Maven projects automatically”<br>
        | 3. Run `MapServer.java` |
 
