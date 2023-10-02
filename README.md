@@ -1,6 +1,6 @@
 # OpenStreetMaps - Web-Based Mapping Application
 
-OpenStreetMaps is a web-based mapping application inspired by Google Maps. It provides various features, including map rastering, routing, autocomplete, and written directions. 
+OpenStreetMaps is a web-based mapping application inspired by Google Maps. It provides various features, including map rastering, routing, autocomplete, and written directions.
 
 ## Table of Contents
 
@@ -19,36 +19,17 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 - **Description**: Given user-specified coordinates of a viewing rectangle and a window size, this part generates a seamless image of the requested map area.
 - **Implementation**: Map rastering involves generating a map image based on user queries. The primary goal is to select and arrange a grid of map tiles that closely matches the user's specified criteria.
 
-## Key Components and Algorithms
+#### Key Components and Algorithms
 
-### LonDPP (Longitude Distance per Pixel)
+- **LonDPP (Longitude Distance per Pixel)**: LonDPP represents the longitudinal distance per pixel, a crucial factor in map rastering. The initial LonDPP for depth 0 (depth0DPP) is calculated based on the provided constants from the MapServer class.
 
-- **LonDPP**: LonDPP represents the longitudinal distance per pixel, a crucial factor in map rastering.
-- The initial LonDPP for depth 0 (depth0DPP) is calculated based on the provided constants from the MapServer class.
+- **Dynamic Depth Calculation**: The depth of the nodes for the rastered image is calculated dynamically based on the user's requested LonDPP. The findDepth method ensures that the depth does not exceed the maximum depth of 7, maintaining a balance between detail and efficiency.
 
-### Dynamic Depth Calculation
+- **Coordinate Conversion**: Several private methods are used to convert between longitude/latitude and tile positions (`lonToXpos`, `latToYpos`) and vice versa (`xPosToLeftLon`, `xPosToRightLon`, `yPosToLeftLat`, `yPosToRightLat`). These methods enable precise positioning of tiles within the grid and accurate bounding box calculations.
 
-- The **depth** of the nodes for the rastered image is calculated dynamically based on the user's requested LonDPP.
-- The findDepth method ensures that the depth does not exceed the maximum depth of 7, maintaining a balance between detail and efficiency.
+- **Raster Grid Generation**: The `fillRasterGrid` method plays a crucial role in generating the raster grid of image file names (`render_grid`) based on calculated tile positions and depth. It efficiently arranges the tiles to reconstruct the complete map image, ensuring seamless rendering.
 
-### Coordinate Conversion
-
-- Several private methods are used to convert between longitude/latitude and tile positions (`lonToXpos`, `latToYpos`) and vice versa (`xPosToLeftLon`, `xPosToRightLon`, `yPosToLeftLat`, `yPosToRightLat`).
-- These methods enable precise positioning of tiles within the grid and accurate bounding box calculations.
-
-### Raster Grid Generation
-
-- The `fillRasterGrid` method plays a crucial role in generating the **raster grid** of image file names (`render_grid`) based on calculated tile positions and depth.
-- It efficiently arranges the tiles to reconstruct the complete map image, ensuring seamless rendering.
-
-### Query Success Check
-
-- The `isQuerySuccessful` method is responsible for verifying whether the user's query falls within the bounds of the available map data.
-- It accounts for scenarios where the query box extends beyond the boundaries of the map data.
-
-
-
-Certainly! Here's an implementation readme for the routing section in Part II:
+- **Query Success Check**: The `isQuerySuccessful` method is responsible for verifying whether the user's query falls within the bounds of the available map data. It accounts for scenarios where the query box extends beyond the boundaries of the map data.
 
 ### Part II: Routing
 
@@ -80,35 +61,28 @@ The routing implementation consists of several key components, including the A* 
 
 ##### Navigation Directions
 
-The `NavigationDirection` class is used to represent navigation directions. Each direction includes the type of direction (e.g., "Go straight," "Turn left"), the name of the street or way to follow, and the distance to travel along that street or way.
-
-The `getDirection` method calculates the type of direction (e.g., straight, slight left, right, etc.) based on the change in bearing between two consecutive nodes.
-
+The `NavigationDirection` class is used to represent navigation directions. Each direction includes the type of direction (e.g., "Go straight," "Turn left"), the name of the street or way to follow, and the distance to travel along that street or way. The `getDirection` method calculates the type of direction (e.g., straight, slight left, right, etc.) based on the change in bearing between two consecutive nodes.
 
 ### Part III: Autocomplete
 
 - **Description**: Users can search for locations by entering partial strings, receiving suggestions for matching locations.
 - **Implementation**: The autocomplete feature is supported through the Trie class.
 
-##### `Trie` Class
+#### `Trie` Class
 
-The `Trie` class is the central component responsible for storing and managing the data necessary for autocomplete.  They are particularly useful for searching strings by prefixes. Each node in a trie represents a single character, and you can follow paths through the tree to find all words that share a common prefix. This allows for efficient retrieval of strings based on their prefixes.
-
-
+The `Trie` class is the central component responsible for storing and managing the data necessary for autocomplete. Tries are particularly useful for searching strings by prefixes. Each node in a trie represents a single character, and you can follow paths through the tree to find all words that share a common prefix. This allows for efficient retrieval of strings based on their prefixes.
 
 1. `findByPrefix(String prefix)`: This method returns a list of strings that match the given prefix. It starts from the root of the Trie and traverses down the tree following the characters of the prefix. Once the prefix is found, it collects all words below that node and returns them as suggestions.
 
 2. `insert(String word)`: This method inserts a new word into the Trie. It starts from the root and creates new nodes for each character in the word, linking them together. The last node is marked as the end of a word.
 
-##### `TrieNode` Class
+#### `TrieNode` Class
 
 The `TrieNode` class represents individual nodes in the Trie. Each node contains the following:
 
 - An array of child nodes for each possible character (lowercase alphabet and space).
 - A boolean flag to indicate whether the node represents the end of a word.
 - A list of words that pass through the node. This list helps collect suggestions efficiently.
-
-
 
 ### Part IV: Written Directions
 
@@ -120,9 +94,12 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
   - `g`: An instance of the `GraphDB` class representing the map or graph data.
   - `route`: A list of node IDs that make up the route to be navigated.
 - It returns a list of `NavigationDirection` objects, each containing information about a specific navigation step.
+
 ## Features
 
-- **Customizable Map Viewing**: Users can specify the map's viewing area and resolution to obtain images tailored to their needs.
+- **Customizable Map Viewing**: Users can specify the map
+
+'s viewing area and resolution to obtain images tailored to their needs.
 - **Efficient Routing**: OpenStreetMaps provides fast and accurate routing information, including distances and turns.
 - **Location Suggestions**: Autocomplete functionality aids users in finding specific locations.
 - **Clear Directions**: Written directions are presented in a user-friendly format, making navigation straightforward.
@@ -145,10 +122,8 @@ To get started with OpenStreetMaps, follow these steps:
 2. Implement the required functionality in the designated classes as outlined in the project description.
 3. Use provided HTML files to test your implementation and understand how your code is invoked.
 
-
 ## Acknowledgments
 
 OpenStreetMaps is inspired by the BearMaps project developed by the CS 61B staff at UC Berkeley. We acknowledge their dedication and contribution to this project.
-
 
 **Happy Mapping! 🗺️**
