@@ -19,6 +19,8 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 - **Description**: Given user-specified coordinates of a viewing rectangle and a window size, this part generates a seamless image of the requested map area.
 - **Implementation**: Map rastering involves generating a map image based on user queries. The primary goal is to select and arrange a grid of map tiles that closely matches the user's specified criteria.
 
+  [OpenStreetMap](https://github.com/samuelkhong/OpenStreetMaps/blob/main/rastering_example.png)
+
 #### Key Components and Algorithms
 
 - **LonDPP (Longitude Distance per Pixel)**: LonDPP represents the longitudinal distance per pixel, a crucial factor in map rastering. The initial LonDPP for depth 0 (depth0DPP) is calculated based on the provided constants from the MapServer class.
