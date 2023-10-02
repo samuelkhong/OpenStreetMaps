@@ -111,7 +111,7 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
 The project is organized into different Java classes, each responsible for a specific aspect of the application. Here are some essential classes:
 
 - **RasterAPIHandler**: This class handles map rastering requests and returns map images.
-- **Router**: Various classes handle routing, including computing paths and directions.
+- **Router**: GraphBuildingHandler	Handler used by SAX parser to parse Nodes and Ways from Berkeley OSM file
 - **Autocomplete Classes**: Trie and TrieNode autocompletes prefixes into strings.
 - **Written Directions Classes**: NavigationDirection transforms routing data into written directions.
 
