@@ -120,8 +120,7 @@ The project is organized into different Java classes, each responsible for a spe
 To get started with OpenStreetMaps, follow these steps:
 
 1. Clone this repository to your local machine.
-2. Implement the required functionality in the designated classes as outlined in the project description.
-3. Use provided HTML files to test your implementation and understand how your code is invoked.
+.
 
 ## Acknowledgments
 
