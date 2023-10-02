@@ -1,6 +1,6 @@
 # OpenStreetMaps - Web-Based Mapping Application
 
-BearMaps is a web-based mapping application inspired by Google Maps. It provides various features, including map rastering, routing, autocomplete, and written directions. This README will guide you through the key components and functionalities of the BearMaps application.
+BearMaps is a web-based mapping application inspired by Google Maps. It provides various features, including map rastering, routing, autocomplete, and written directions. 
 
 ## Table of Contents
 
