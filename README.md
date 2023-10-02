@@ -88,7 +88,27 @@ The `getDirection` method calculates the type of direction (e.g., straight, slig
 ### Part III: Autocomplete
 
 - **Description**: Users can search for locations by entering partial strings, receiving suggestions for matching locations.
-- **Implementation**: The autocomplete feature is supported through dedicated Java classes that handle query matching and suggestion generation.
+- **Implementation**: The autocomplete feature is supported through the Trie class.
+
+##### `Trie` Class
+
+The `Trie` class is the central component responsible for storing and managing the data necessary for autocomplete.  They are particularly useful for searching strings by prefixes. Each node in a trie represents a single character, and you can follow paths through the tree to find all words that share a common prefix. This allows for efficient retrieval of strings based on their prefixes.
+
+
+
+1. `findByPrefix(String prefix)`: This method returns a list of strings that match the given prefix. It starts from the root of the Trie and traverses down the tree following the characters of the prefix. Once the prefix is found, it collects all words below that node and returns them as suggestions.
+
+2. `insert(String word)`: This method inserts a new word into the Trie. It starts from the root and creates new nodes for each character in the word, linking them together. The last node is marked as the end of a word.
+
+##### `TrieNode` Class
+
+The `TrieNode` class represents individual nodes in the Trie. Each node contains the following:
+
+- An array of child nodes for each possible character (lowercase alphabet and space).
+- A boolean flag to indicate whether the node represents the end of a word.
+- A list of words that pass through the node. This list helps collect suggestions efficiently.
+
+
 
 ### Part IV: Written Directions
 
