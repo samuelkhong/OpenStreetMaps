@@ -17,11 +17,6 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 ### Part I: Map Rastering
 
 - **Description**: Given user-specified coordinates of a viewing rectangle and a window size, this part generates a seamless image of the requested map area.
-- **Implementation**: The `RasterAPIHandler` class contains the `processRequest` method responsible for processing user requests and returning the appropriate map image.
-
-### Part II: Routing
-
-- **Description**: Routing functionality allows users to obtain step-by-step street directions between two specified locations.
 - **Implementation**: Map rastering involves generating a map image based on user queries. The primary goal is to select and arrange a grid of map tiles that closely matches the user's specified criteria.
 
 ## Key Components and Algorithms
@@ -52,6 +47,11 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 - It accounts for scenarios where the query box extends beyond the boundaries of the map data.
 
 
+
+### Part II: Routing
+
+- **Description**: Routing functionality allows users to obtain step-by-step street directions between two specified locations.
+- **Implementation**: 
 ### Part III: Autocomplete
 
 - **Description**: Users can search for locations by entering partial strings, receiving suggestions for matching locations.
