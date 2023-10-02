@@ -113,8 +113,13 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
 ### Part IV: Written Directions
 
 - **Description**: Enhancing the routing feature, OpenStreetMaps provides written driving directions to guide users from their starting point to their destination.
-- **Implementation**: Additional logic and classes are employed to transform routing data into easy-to-follow written directions.
+- **Implementation**: `routeDirections`
 
+- The `routeDirections` method is the main function responsible for generating written directions.
+- It takes two parameters:
+  - `g`: An instance of the `GraphDB` class representing the map or graph data.
+  - `route`: A list of node IDs that make up the route to be navigated.
+- It returns a list of `NavigationDirection` objects, each containing information about a specific navigation step.
 ## Features
 
 - **Customizable Map Viewing**: Users can specify the map's viewing area and resolution to obtain images tailored to their needs.
