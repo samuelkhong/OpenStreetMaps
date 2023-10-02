@@ -48,10 +48,43 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 
 
 
+Certainly! Here's an implementation readme for the routing section in Part II:
+
 ### Part II: Routing
 
-- **Description**: Routing functionality allows users to obtain step-by-step street directions between two specified locations.
-- **Implementation**: 
+#### Description
+
+The routing section of this implementation allows users to find the shortest path between two specified locations on a map using a graph-based algorithm. It also provides step-by-step navigation directions based on the calculated route.
+
+#### Implementation
+
+The routing implementation consists of several key components, including the A* search algorithm, a priority queue, and a data structure to represent navigation directions. Below, we describe these components and how they work together to provide routing functionality.
+
+##### Key Components
+
+1. **A* Search Algorithm**: The routing algorithm utilizes the A* (A-star) search algorithm, which combines Dijkstra's algorithm with a heuristic estimate to find the shortest path efficiently. It explores nodes with the lowest estimated total cost first, where the cost is the sum of the distance traveled from the source node and a heuristic estimate of the remaining distance to the target node.
+
+2. **Priority Queue**: A priority queue (implemented as a `PriorityQueue<nodePriority>`) is used to manage and select nodes for exploration efficiently. The priority queue orders nodes based on their priority values, allowing the algorithm to explore nodes with lower costs first.
+
+3. **Node Priority**: The `nodePriority` class represents nodes during pathfinding. It stores information about each node, such as its ID, current distance from the source node, priority value (combination of current distance and heuristic estimate), and a reference to its parent node in the path.
+
+4. **Navigation Directions**: The `NavigationDirection` class is used to represent navigation directions. Each direction includes the type of direction (e.g., "Go straight," "Turn left"), the name of the street or way to follow, and the distance to travel along that street or way.
+
+##### Main Functions
+
+- `shortestPath`: This method takes the `GraphDB`, start and destination coordinates (longitude and latitude), and returns a list of node IDs representing the shortest path from the start location to the destination location.
+
+- `Astar`: This private method performs the A* search algorithm on the graph to find the shortest path between two nodes (source and goal). It returns a list of node IDs representing the path.
+
+- `routeDirections`: This method takes the `GraphDB`, a list of node IDs representing a route, and returns a list of `NavigationDirection` objects. These objects describe the step-by-step directions for navigating the given route.
+
+##### Navigation Directions
+
+The `NavigationDirection` class is used to represent navigation directions. Each direction includes the type of direction (e.g., "Go straight," "Turn left"), the name of the street or way to follow, and the distance to travel along that street or way.
+
+The `getDirection` method calculates the type of direction (e.g., straight, slight left, right, etc.) based on the change in bearing between two consecutive nodes.
+
+
 ### Part III: Autocomplete
 
 - **Description**: Users can search for locations by entering partial strings, receiving suggestions for matching locations.
