@@ -41,6 +41,9 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 #### Description
 
 In the GraphDB class. The routing section of this implementation allows users to find the shortest path between two specified locations on a map using a graph-based algorithm. It also provides step-by-step navigation directions based on the calculated route.
+ ![Router](https://github.com/samuelkhong/OpenStreetMaps/blob/main/routing_lanes.gif)
+
+
 
 #### Implementation
 
@@ -72,6 +75,8 @@ The `NavigationDirection` class is used to represent navigation directions. Each
 
 - **Description**: Users can search for locations by entering partial strings, receiving suggestions for matching locations.
 - **Implementation**: The autocomplete feature is supported through the Trie class.
+
+  ![Router](https://github.com/samuelkhong/OpenStreetMaps/blob/main/autocomplete_loc.gif)
 
 #### `Trie` Class
 
