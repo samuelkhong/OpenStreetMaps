@@ -126,7 +126,7 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
 The project is organized into different Java classes, each responsible for a specific aspect of the application. Here are some essential classes:
 
 - **Rasterr**: This class handles map rastering requests and returns map images.
-- - **GraphDB**: Graph representation of the contents of Berkeley OSM. Implemented an Autocomplete system using a Trie data structure, which allows matching a prefix to valid location names in O(k) time, where k is the number of words sharing the prefix.
+- **GraphDB**: Graph representation of the contents of Berkeley OSM. Implemented an Autocomplete system using a Trie data structure, which allows matching a prefix to valid location names in O(k) time, where k is the number of words sharing the prefix.
 - **Router**: Uses A* search algorithm to find the shortest path between two points in Berkeley; uses shortest path to generate navigation directions
 - **Autocomplete Classes**: Trie and TrieNode autocompletes prefixes into strings.
 - **Written Directions Classes**: NavigationDirection transforms routing data into written directions.
@@ -135,8 +135,14 @@ The project is organized into different Java classes, each responsible for a spe
 
 To get started with OpenStreetMaps, follow these steps:
 
-1. Clone this repository to your local machine.
-.
+| Step | Instructions |
+|------|--------------|
+| 1.   | Git clone this repo and [library-sp18](https://github.com/Berkeley-CS61B/library-sp18), which contains OpenStreetMaps images and dataset. |
+| 2.   | **Running with IntelliJ:**<br>
+       | 1. `New -> Project from Existing Sources -> select Bear-Maps -> "Import Project from External Model" (Maven)`<br>
+       | 2. At the Import Project window, check: “Import Maven projects automatically”<br>
+       | 3. Run `MapServer.java` |
+
 
 ## Acknowledgments
 
