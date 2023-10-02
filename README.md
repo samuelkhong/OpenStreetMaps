@@ -31,13 +31,13 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 
 ### Part IV: Written Directions
 
-- **Description**: Enhancing the routing feature, BearMaps provides written driving directions to guide users from their starting point to their destination.
+- **Description**: Enhancing the routing feature, OpenStreetMaps provides written driving directions to guide users from their starting point to their destination.
 - **Implementation**: Additional logic and classes are employed to transform routing data into easy-to-follow written directions.
 
 ## Features
 
 - **Customizable Map Viewing**: Users can specify the map's viewing area and resolution to obtain images tailored to their needs.
-- **Efficient Routing**: BearMaps provides fast and accurate routing information, including distances and turns.
+- **Efficient Routing**: OpenStreetMaps provides fast and accurate routing information, including distances and turns.
 - **Location Suggestions**: Autocomplete functionality aids users in finding specific locations.
 - **Clear Directions**: Written directions are presented in a user-friendly format, making navigation straightforward.
 - **Interactive Interface**: The web-based interface allows users to interact with the map and access various features seamlessly.
@@ -62,7 +62,7 @@ To get started with OpenStreetMaps, follow these steps:
 
 ## Acknowledgments
 
-BearMaps is inspired by the BearMaps project developed by the CS 61B staff at UC Berkeley. We acknowledge their dedication and contribution to this project.
+OpenStreetMaps is inspired by the BearMaps project developed by the CS 61B staff at UC Berkeley. We acknowledge their dedication and contribution to this project.
 
 
 **Happy Mapping! 🗺️**
