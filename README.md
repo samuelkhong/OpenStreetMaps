@@ -21,6 +21,7 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 - **Implementation**: Map rastering involves generating a map image based on user queries. The primary goal is to select and arrange a grid of map tiles that closely matches the user's specified criteria.
 
   ![OpenStreetMap](https://raw.githubusercontent.com/samuelkhong/OpenStreetMaps/main/rastering_example.png)
+  ![Raster GIF](https://github.com/samuelkhong/OpenStreetMaps/raw/main/raster.gif)
 
 
 #### Key Components and Algorithms
