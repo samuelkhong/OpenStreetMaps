@@ -38,7 +38,7 @@ OpenStreetMaps is designed to offer users an interactive map experience similar 
 
 #### Description
 
-The routing section of this implementation allows users to find the shortest path between two specified locations on a map using a graph-based algorithm. It also provides step-by-step navigation directions based on the calculated route.
+In the GraphDB class. The routing section of this implementation allows users to find the shortest path between two specified locations on a map using a graph-based algorithm. It also provides step-by-step navigation directions based on the calculated route.
 
 #### Implementation
 
@@ -110,8 +110,9 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
 
 The project is organized into different Java classes, each responsible for a specific aspect of the application. Here are some essential classes:
 
-- **RasterAPIHandler**: This class handles map rastering requests and returns map images.
-- **Router**: GraphBuildingHandler	Handler used by SAX parser to parse Nodes and Ways from Berkeley OSM file
+- **Rasterr**: This class handles map rastering requests and returns map images.
+- - **GraphDB**: Graph representation of the contents of Berkeley OSM. Implemented an Autocomplete system using a Trie data structure, which allows matching a prefix to valid location names in O(k) time, where k is the number of words sharing the prefix.
+- **Router**: Uses A* search algorithm to find the shortest path between two points in Berkeley; uses shortest path to generate navigation directions
 - **Autocomplete Classes**: Trie and TrieNode autocompletes prefixes into strings.
 - **Written Directions Classes**: NavigationDirection transforms routing data into written directions.
 
