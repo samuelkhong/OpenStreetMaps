@@ -97,9 +97,7 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
 
 ## Features
 
-- **Customizable Map Viewing**: Users can specify the map
-
-'s viewing area and resolution to obtain images tailored to their needs.
+- **Customizable Map Viewing**: Users can specify the map viewing area and resolution to obtain images tailored to their needs.
 - **Efficient Routing**: OpenStreetMaps provides fast and accurate routing information, including distances and turns.
 - **Location Suggestions**: Autocomplete functionality aids users in finding specific locations.
 - **Clear Directions**: Written directions are presented in a user-friendly format, making navigation straightforward.
@@ -110,9 +108,9 @@ The `TrieNode` class represents individual nodes in the Trie. Each node contains
 The project is organized into different Java classes, each responsible for a specific aspect of the application. Here are some essential classes:
 
 - **RasterAPIHandler**: This class handles map rastering requests and returns map images.
-- **Routing Classes**: Various classes handle routing, including computing paths and directions.
-- **Autocomplete Classes**: These classes assist in location search and suggestion.
-- **Written Directions Classes**: Responsible for transforming routing data into written directions.
+- **Router**: Various classes handle routing, including computing paths and directions.
+- **Autocomplete Classes**: Trie and TrieNode autocompletes prefixes into strings.
+- **Written Directions Classes**: NavigationDirection transforms routing data into written directions.
 
 ## Getting Started
 
