@@ -11,7 +11,6 @@ BearMaps is a web-based mapping application inspired by Google Maps. It provides
 5. [Implementation Details](#implementation-details)
 6. [Contributing](#contributing)
 7. [Acknowledgments](#acknowledgments)
-8. [License](#license)
 
 ## Project Overview
 
