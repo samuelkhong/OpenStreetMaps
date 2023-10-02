@@ -79,6 +79,8 @@ The `NavigationDirection` class is used to represent navigation directions. Each
 - **Description**: Users can search for locations by entering partial strings, receiving suggestions for matching locations.
   ![Router](https://github.com/samuelkhong/OpenStreetMaps/blob/main/autocomplete_loc.gif)
 
+  
+
 - **Implementation**: The autocomplete feature is supported through the Trie class.
 
   
