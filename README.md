@@ -8,7 +8,6 @@ BearMaps is a web-based mapping application inspired by Google Maps. It provides
 2. [Features](#features)
 3. [Project Structure](#project-structure)
 4. [Getting Started](#getting-started)
-5. [Implementation Details](#implementation-details)
 6. [Contributing](#contributing)
 7. [Acknowledgments](#acknowledgments)
 
@@ -60,8 +59,6 @@ To get started with BearMaps, follow these steps:
 1. Clone this repository to your local machine.
 2. Implement the required functionality in the designated classes as outlined in the project description.
 3. Use provided HTML files to test your implementation and understand how your code is invoked.
-
-
 
 ## Contributing
 
