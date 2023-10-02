@@ -1,6 +1,7 @@
 # OpenStreetMaps - Web-Based Mapping Application
 
 OpenStreetMaps is a web-based mapping application inspired by Google Maps. It provides various features, including map rastering, routing, autocomplete, and written directions.
+I implemented the backend functionality of the web app. 
 
 ## Table of Contents
 
