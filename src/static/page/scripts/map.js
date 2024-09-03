@@ -1,9 +1,5 @@
-/**
-  * Map project javascript file written for CS61B/CS61BL.
-  * This is not an example of good javascript or programming practice.
-  * Feel free to improve this front-end for your own personal pleasure.
-  * Authors: Alan Yao (Spring 2016), Colby Guan (Spring 2017), Alexander Hwang (Spring 2018)
-  * If using, please credit authors.
+/** 
+  * Authors: Alan Yao , Colby Guan , Alexander Hwang 
   **/
 
 $(function() {
